@@ -1,0 +1,190 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Futuristic Art Toys Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Step into the future with our exclusive art toys. Limited editions available now!">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Exo+2:wght@300;700&amp;display=swap" rel="stylesheet">
+    <!-- Inline CSS -->
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Exo 2', sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
+            /* Responsive Background */
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Overlay Effect */
+        .overlay {
+            background: rgba(0, 0, 0, 0.75);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 20px 10px;
+            background: url('foreground.png') no-repeat center;
+            background-size: contain;
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.5em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* Products Section */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 255, 200, 0.7);
+        }
+        .product-card img {
+            width: 100%;
+            border-bottom: 1px solid #0affaa;
+            margin-bottom: 15px;
+        }
+        .product-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .product-card p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .product-card button {
+            background: linear-gradient(45deg, #00e6b8, #0affaa);
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background 0.3s;
+            margin-bottom: 10px;
+        }
+        .product-card button:hover {
+            background: linear-gradient(45deg, #00b38f, #00cc99);
+        }
+        /* Hidden Description */
+        .description {
+            display: none;
+            font-size: 1em;
+            color: #ff6f61;
+            margin-top: 15px;
+            text-align: center;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay for Background Effect -->
+    <div class="overlay"></div>
+    <!-- Header Section -->
+    <header>
+        <h1>Creative Art Toys</h1>
+        <p>Step away from screens, colors galore, With every toy, let creativity with Creative Art Toys.</p>
+    </header>
+    <!-- Products Section -->
+    <section class="products">
+        <div class="product-card">
+            <img src="https://drive.google.com/thumbnail?id=1eC7gyB42TT5GIJZG7NHlyQRtgcNXThM8&authuser=1" alt="Ares">
+            <h2>Ares</h2>
+            <p>220 Bath</p>
+            <button class="preorder-btn">Preorder</button>
+            <div class="description">Sorry. This item is just for a school project only.</div>
+        </div>
+        <div class="product-card">
+            <img src="https://drive.google.com/thumbnail?id=1ajhOj9OjJc3jQ8to9hUf1I7kVwI2hP0q&amp;authuser=1" alt="Zeus">
+            <h2>Zeus</h2>
+            <p>199 Bath</p>
+            <button class="preorder-btn">Preorder</button>
+            <div class="description">Sorry. This item is just for a school project only.</div>
+        </div>
+        <div class="product-card">
+            <img src="https://drive.google.com/thumbnail?id=18ukR2gcos-M-4wQrZFkChykd27clTLHj&authuser=1" alt="Aphrodite">
+            <h2>Aphrodite</h2>
+            <p>250 Bath</p>
+            <button class="preorder-btn">Preorder</button>
+            <div class="description">Sorry. This item is just for a school project only.</div>
+        </div>
+        <!-- Add more product cards as needed -->
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 IOTronic.co Journey beyond imagination.</p>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // Preorder Button Functionality
+        const buttons = document.querySelectorAll('.preorder-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const description = this.nextElementSibling;
+                description.style.display = 'block';
+            });
+        });
+        // Responsive Background Adjustment
+        function adjustBackground() {
+            document.body.style.backgroundSize = 'cover';
+        }
+        window.addEventListener('resize', adjustBackground);
+        adjustBackground();
+    </script>
+
+
+
+</body></html>
