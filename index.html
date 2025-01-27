@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <title>Futuristic Art Toys Collection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,9 +80,24 @@
             font-size: 1.8em;
             margin-bottom: 10px;
         }
-        .product-card p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        .product-card p,
+        .product-card button,
+        .product-card .description {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .product-card:hover p,
+        .product-card:hover button {
+            display: block;
+            opacity: 1;
+        }
+        .description {
+            display: none;
+            font-size: 1em;
+            color: #ff6f61;
+            margin-top: 15px;
+            text-align: center;
         }
         .product-card button {
             background: linear-gradient(45deg, #00e6b8, #0affaa);
@@ -96,14 +112,6 @@
         }
         .product-card button:hover {
             background: linear-gradient(45deg, #00b38f, #00cc99);
-        }
-        /* Hidden Description */
-        .description {
-            display: none;
-            font-size: 1em;
-            color: #ff6f61;
-            margin-top: 15px;
-            text-align: center;
         }
         /* Footer */
         footer {
@@ -136,7 +144,7 @@
     <!-- Header Section -->
     <header>
         <h1>Creative Art Toys</h1>
-        <p>Step away from screens, colors galore, With every toy, let creativity with Creative Art Toys.</p>
+        <p>Step away from screens, colors galore, With every toy, let creativity soar with Creative Art Toys.</p>
     </header>
     <!-- Products Section -->
     <section class="products">
@@ -175,6 +183,7 @@
             button.addEventListener('click', function() {
                 const description = this.nextElementSibling;
                 description.style.display = 'block';
+                description.style.opacity = '1';
             });
         });
         // Responsive Background Adjustment
@@ -184,7 +193,5 @@
         window.addEventListener('resize', adjustBackground);
         adjustBackground();
     </script>
-
-
-
-</body></html>
+</body>
+</html>
